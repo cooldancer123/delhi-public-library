@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styling2.css">
+        <title>Add Book</title></head>
+<body>
+    <h6><a href="1.html"><input type="submit" value="Logout"></a><a href="2 - Librarian.html"><input type="submit" value="Back"></a></h6>
+    <h3>Fill the blanks below to add a book to the database</h3>
+	<form  action="add.php" method="POST" onsubmit="return add_book();">
+	<table align="center">
+	<tr>
+    <td>Book ID:</td> 
+	<td><input name="bid" id="bid" type="text" required></td>
+	</tr>
+	<tr>
+    <td>Book Name:</td> 
+	<td><input name="bname" id="bname" type="text" required></td><br>
+	</tr>
+	<tr>
+    <td>Author:</td> 
+	<td><input name="author" id="author" type="text" required></td><br>
+	</tr>
+	<tr>
+    <td>Language:</td> 
+	<td><input name="language" id="language" type="text" required></td><br>
+	</tr>
+	<tr>
+    <td>Stock:</td> 
+	<td><input name="stock" id="stock" type="text" required></td><br>
+	</tr>
+	<tr>
+    <td colspan="2" align="center"><input type="submit" value="Add Book"></td>
+	</tr>
+	</table>
+	</form>
+    </body>
+    
+<script>
+    
+function add_book(){
+    var x1,x2,x3,x4,x5,x6;
+    x1=document.getElementById("author").value;
+    x2=document.getElementById("language").value;
+    x3=document.getElementById("stock").value;
+	    x4=document.getElementById("bid").value;
+    x5=document.getElementById("bname").value;
+    if(!isNaN(x1)){
+        window.alert("Author name cannot contain numbers");
+		return false;
+    }
+    if(!isNaN(x2)){
+        window.alert("No numbers allowed in language");
+		return false;
+    }
+    if(isNaN(x3)){
+        window.alert("Enter the number of books in the inventory");
+		return false;
+    }
+	if(isNaN(x4))
+	{
+		alert("Please enter correct book ID");
+		return false;
+	}
+	else{
+        window.alert("Record addtion successful!");
+	return true;
+	}
+	}
+
+</script>
+</html>

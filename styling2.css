@@ -1,0 +1,41 @@
+body{
+            font-size: 20px;
+            font-family:sans-serif;
+            background-color:bisque;
+            margin: 0 15%;
+}
+        
+h3{
+            color: #4a231a;
+            font-family: fantasy;
+            font-weight: 300;
+            text-align: left;
+            border-bottom: 2px solid #555;
+            border-bottom-color: black;
+            margin-top: 30px;
+}
+
+p,form{
+            text-align: left;
+            color: black;
+            font-weight:100;
+            font-family: fantasy;
+        }
+    
+
+small{ 
+            border-top: 2px solid #555;
+            font-family: fantasy;
+            border-top-color: black;    
+            font-size: 15px; 
+}
+
+small,footer{ 
+            border-top: 2px solid #555;
+            border-top-color: black;    
+            font-size: 15px;  
+            margin-top: 180px;
+}
+h6{
+    text-align: right;
+}

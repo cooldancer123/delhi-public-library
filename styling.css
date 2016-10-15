@@ -1,0 +1,37 @@
+body{
+            font-size: 20px;
+            font-family:fantasy;
+            background-color:bisque;
+            margin:0 10%;
+}    
+h1{
+            color: #4a231a;
+            font-family: fantasy;
+            font-weight: 300;
+            text-align: center;
+            border-bottom: 2px solid #555;
+            border-bottom-color: black;
+            margin-top: 70px;
+}
+
+p{     
+            text-align: left;
+            color: black;
+            font-weight:50;
+            font-family: fantasy;
+}
+
+footer{ 
+            border-top: 2px solid #555;
+            border-top-color: black;    
+            font-size: 15px;  
+            margin-top: 160px;
+}
+
+h6,a{
+  text-align: right;  
+}
+
+h2{
+	text-align: right;
+}

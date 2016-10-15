@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styling2.css">
+        <title>Issue</title>
+    </head>
+<body>
+<h6><a href="2 - Reader.html"><input type="submit" value="Back"></a></h6>
+    <h3>Fill the blanks below to issue a book</h3>
+	<form action="issue.php" method="POST" onsubmit="return search();">
+	<table align="center">
+	<tr>
+    <td>Book ID:</td> 
+	<td><input id="bid" name="bid" type="text"  required></td>
+	</tr>
+	<tr>
+    <td>Reader name:</td> 
+	<td><input id="rname" name="rname" type="text"  required></td>
+	</tr>
+	<tr>
+    <td colspan="2" align="center"><input type="submit" value="Issue"></td>
+	</tr>
+	</table>
+	</form>
+    </body>
+<script>
+function search(){
+    
+    var x1,x2;
+    x1=document.getElementById("rname").value;
+	x2=document.getElementById("bid").value;
+    if(!isNaN(x1)){
+        window.alert("Reader name cannot contain numbers");
+		return false;
+    }
+	if(isNaN(x2))
+	{
+		alert("Please enter correct book ID");
+		return false;
+	}
+    else{
+        //window.alert("Query submitted successfully");
+		return true;
+    }
+}
+</script>
+</html>

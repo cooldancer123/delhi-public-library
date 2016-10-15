@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styling2.css">
+        <title>Search</title>
+    </head>
+<body>
+	 <h6><a href="2 - Reader.html"><input type="submit" value="Back"></a></h6>
+    <h3>Fill up the blanks below to search a book of your choice</h3>
+	<form action="searchr.php" method="POST" onsubmit="return search();">
+	<table align="center">
+	<tr>
+    <td>Book Name:</td> 
+	<td><input id="bname" name="bname" type="text"  required></td>
+	</tr>
+	<tr>
+    <td>Author:</td> 
+	<td><input id="author" name="author" type="text" required></td>
+	</tr>
+	<tr>
+    <td>Language:</td> 
+	<td><input id="language" name="language" type="text"  required></td>
+	</tr>
+	<tr>
+    <td colspan="2" align="center"><input type="submit" value="Search"></td>
+	</tr>
+	</table>
+	</form>
+    </body>
+<script>
+function search(){
+    
+    var x1,x2,x3;
+    x1=document.getElementById("author").value;
+    x2=document.getElementById("language").value;
+	x3=document.getElementById("bname").value;
+    
+    if(!isNaN(x1)){
+        window.alert("Author name cannot contain numbers");
+		return false;
+    }
+	if(!isNaN(x3)){
+        window.alert("book name cannot contain numbers");
+		return false;
+    }
+    if(!isNaN(x2)){
+        window.alert("No numbers allowed in language");
+		return false;
+    }
+	else
+	{
+	//alert("Successful");
+	
+	return true;
+	}
+}
+    
+</script>
+</html>

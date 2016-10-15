@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styling2.css">
+        <title>Delete Book</title></head>
+<body>
+    <h6><a href="1.html"><input type="submit" value="Logout"></a><a href="2 - Librarian.html"><input type="submit" value="Back"></a></h6>
+    <h3>Fill the blanks below to search a particular book from the database</h3>
+	<form action="delete.php" method="POST" onsubmit="return del_book();">
+	<table align="center">
+	<tr>
+    <td>Book Name:</td> 
+	<td><input id="bname" name="bname" type="text" required></td>
+	</tr>
+	<tr>
+    <td>Author:</td> 
+	<td><input id="author" name="author" type="text" required></td>
+	</tr>
+	<tr>
+    <td colspan="2" align="center"><input type="submit" value="Delete"></td>
+	</tr>
+	</table>
+	</form>
+    </body>
+<script>
+function del_book(){
+    
+    var x1,x2;
+    x1=document.getElementById("author").value;
+    x2=document.getElementById("bname").value;
+    if(!isNaN(x1)){
+        window.alert("Author name cannot contain numbers");
+		return false;
+    }
+    if(!isNaN(x2)){
+        window.alert("No numbers allowed in book name");
+		return false;
+    }
+    else{
+		return true;
+    }
+}
+    
+</script>
+</html>
